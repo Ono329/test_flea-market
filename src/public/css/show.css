@@ -1,0 +1,42 @@
+.product-detail {
+    display: flex;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.product-detail__image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    background: #eee;
+}
+
+.product-detail__info {
+    flex: 1;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.buy-button {
+    display: inline-block;
+    background: #ff5a5f;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    text-decoration: none;
+}
+
+.comment {
+    background: #f3f3f3;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+}
