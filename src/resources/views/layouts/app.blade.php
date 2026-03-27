@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>会員登録画面</title>
-  <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+  <!-- <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}"> -->
+  <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/verify.css') }}">
   <link rel="stylesheet" href="{{ asset('css/common.css') }}">
- 
+
   @yield('css')
 </head>
 
@@ -18,7 +21,7 @@
       <div class="header-utilities">
         <!-- <a class="header__logo" href="/"> -->
         
-          <img src="{{ asset('images/header.png') }}" alt="ヘッダー画像">  
+          <img class="header__logo" src="{{ asset('images/header.png') }}" alt="ヘッダー画像">  
         <!--</a>-->
           <!-- COACHTECH -->
         <!-- </a> -->

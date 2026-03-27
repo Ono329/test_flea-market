@@ -1,0 +1,148 @@
+/* 全体 */
+body{
+    background:#f5f5f5;
+    font-family: sans-serif;
+}
+
+/* タイトル */
+.title{
+    text-align:center;
+    margin:40px 0;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* フォーム */
+.sell-form{
+    width:600px;
+    margin:0 auto;
+    background:white;
+    padding:40px;
+    border-radius:6px;
+}
+
+/* 見出し */
+.sell-form h3{
+    margin-top:30px;
+    margin-bottom:10px;
+    font-size:16px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:5px;
+}
+
+/* input */
+.sell-form input[type="text"],
+.sell-form input[type="number"],
+.sell-form select,
+.sell-form textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+/* textarea */
+.sell-form textarea{
+    height:100px;
+}
+
+/* 画像アップロード */
+.image-upload{
+    border:2px dashed #ff6b6b;
+    padding:30px;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+/* ファイルinput非表示 */
+.image-upload input{
+    display:none;
+}
+
+/* 画像選択ボタン */
+.image-label{
+    display:inline-block;
+    padding:8px 20px;
+    border:1px solid #ff6b6b;
+    color:#ff6b6b;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.image-label:hover{
+    background:#ffe5e5;
+}
+
+/* ファイル名 */
+#fileName{
+    margin-top:10px;
+    font-size:13px;
+    color:#666;
+}
+
+/* カテゴリー */
+.category{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.category span{
+    border:1px solid #ff6b6b;
+    color:#ff6b6b;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    cursor:pointer;
+    display:inline-block;
+}
+
+/* チェックボックス非表示 */
+.category input{
+    display:none;
+}
+
+/* 選択時 */
+.category input:checked + span{
+    background:#ff6b6b;
+    color:white;
+}
+
+/* 出品ボタン */
+.sell-btn{
+    width:100%;
+    padding:12px;
+    background:#ff6b6b;
+    color:white;
+    border:none;
+    font-size:16px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.sell-btn:hover{
+    opacity:0.9;
+}
+
+.price-input{
+    position: relative;
+}
+
+.price-input span{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #555;
+}
+
+.price-input input{
+    width: 100%;
+    padding: 10px 10px 10px 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

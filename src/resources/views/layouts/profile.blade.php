@@ -8,6 +8,11 @@
   <title>プロフィール</title>
   <link rel="stylesheet" href="{{ asset('css/edit.css') }}">
   <link rel="stylesheet" href="{{ asset('css/items.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/show.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/purchase.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/sell.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/mypage.css') }}">
  
   @yield('css')
 </head>
@@ -23,25 +28,44 @@
           <!-- COACHTECH -->
         <!-- </a> -->
 
-        <form class="search-form">
-          <input type="text" placeholder="なにをお探しですか?">
+        <form action="{{ route('products.index') }}" method="GET" class="search-form">
+          <input 
+              type="text" 
+              name="keyword"
+              placeholder="なにをお探しですか?"
+              value="{{ request('keyword') }}">
         </form>
       </div>
 
         <nav>
-          <ul class="header-nav">
-            @if (Auth::check())
-            <li class="header-nav__item">
-              <form action="{{ route('logout') }}" method="POST" >
-                  @csrf 
+    <ul class="header-nav">
+
+    <li class="header-nav__item">
+        @auth
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
                 <button class="logout-button">ログアウト</button>
-              </form>
-              <a class="header-nav__link" href="/mypage/profile">マイページ</a>
-              <a class="header-nav__button" href="/sell">出品</a>
-            </li>
-            
-            @endif
-          </ul>
+            </form>
+        @else
+            <a href="{{ route('login') }}" class="header-nav__link">ログアウト</a>
+        @endauth
+    </li>
+
+    <li class="header-nav__item">
+        <a href="{{ auth()->check() ? route('mypage') : route('login') }}"
+           class="header-nav__link">
+           マイページ
+        </a>
+    </li>
+
+    <li class="header-nav__item">
+        <a href="{{ auth()->check() ? '/sell' : route('login') }}"
+           class="header-nav__button">
+           出品
+        </a>
+    </li>
+
+</ul>
         </nav>
       </div>
     </div>

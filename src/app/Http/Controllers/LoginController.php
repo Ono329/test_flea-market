@@ -23,6 +23,11 @@ class LoginController extends Controller
         // 認証
         if (Auth::attempt($credentials)) {
         $request->session()->regenerate();
+        
+        // メール未認証なら強制移動
+        if (!Auth::user()->hasVerifiedEmail()) {
+            return redirect()->route('verification.notice');
+        }
 
         // 初回ログイン判定
         if (!Auth::user()->is_profile_set) {

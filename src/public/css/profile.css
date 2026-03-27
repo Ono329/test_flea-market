@@ -1,0 +1,71 @@
+.header {
+    background: #000;
+}
+
+.header__inner {
+    margin: 0 auto;
+    /* height: 30px; */
+    padding: 20px 20px;
+    max-width: none;
+
+    display: flex;              /* ← 追加 */
+    align-items: center;        /* ← 追加 */
+    justify-content: space-between; /* ← 追加 */
+}
+
+.header__logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header img {
+    width: auto;
+    height: 30px;
+    margin-left: 0px;
+}
+
+/* 左側 */
+.header-utilities {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 検索を中央に */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.search-form input {
+    width: 300px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* 右側 */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+/* リンク */
+.header-nav__link {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 出品ボタン */
+.header-nav__button {
+    background: #ff4d4d;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+}

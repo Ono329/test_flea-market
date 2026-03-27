@@ -1,24 +1,29 @@
 .product-detail {
     display: flex;
-    gap: 60px;
-    max-width: 1000px;
-    margin: 50px auto;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 80px auto;
+
+    align-items: flex-start;
 }
 
 .product-detail__image img {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     background: #eee;
 }
 
 .product-detail__info {
     flex: 1;
+
+    padding-top: 20px;
+
 }
 
 .price {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: normal;
     margin: 10px 0;
 }
 
@@ -26,7 +31,7 @@
     display: inline-block;
     background: #ff5a5f;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 160px;
     margin: 20px 0;
     text-decoration: none;
 }
@@ -38,5 +43,97 @@
 }
 
 textarea {
-    width: 100%;
+    width: 70%;
+}
+
+.reaction{
+    display: flex;
+    gap: 40px;
+}
+
+.favorite-btn{
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column; /* 縦並び */
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.favorite-btn img{
+    width: 28px;
+}
+
+.comment-icon{
+    display: flex;
+    flex-direction: column; /* 縦並び */
+    align-items: center;
+    gap: 4px;
+}
+
+.comment-icon img{
+    width: 22px;
+}
+
+/* いいねしていない */
+.not-liked{
+    color: color: transparent;
+}
+
+/* いいねした */
+.liked{
+    color: red;
+}
+
+.count{
+    margin-top:4px; 
+}
+
+.submit{
+    display: inline-block;
+    background: #ff5a5f;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    text-decoration: none;
+}
+
+.comment-input{
+    width:100%;
+    height:100px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:14px;
+}
+
+.product-category {
+    margin-bottom: 20px;
+}
+
+.category-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-tag {
+    display: inline-block;
+    padding: 4px 14px;
+    background: #d9d9d9;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.error-message{
+    color:#ff5555;
+    font-size:13px;
+    margin-top:5px;
 }
