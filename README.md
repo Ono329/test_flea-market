@@ -16,7 +16,7 @@
 ＊購入済み商品に「SOLD」表示  
 
 ## 環境構築  
-git clone<>  
+git clone：<https://github.com/Ono329/test_flea-market.git>  
 cd test_frea-market  
 docker-compose up -d --build  
 
@@ -32,10 +32,10 @@ php artisan db:seed
 php artisan storage:link  
 
 ## 開発環境  
-＊トップページ：[http://localhost/]  
-＊会員登録画面：[http://localhost/register]  
-＊ログイン画面：[http://localhost/login]  
-＊phpMyAdmin：[http://localhost:8080/]  
+＊トップページ：<http://localhost/>  
+＊会員登録画面：<http://localhost/register>  
+＊ログイン画面：<http://localhost/login>  
+＊phpMyAdmin：<http://localhost:8080/>  
 
 ## 使用技術  
 ＊PHP 8.5.3 (cli)  
