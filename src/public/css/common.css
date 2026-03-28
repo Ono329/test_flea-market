@@ -1,7 +1,27 @@
-.header img {
-    width: 60px;
-    height: auto;
-    margin-left: 10px;
+.header {
+    background: #000;
 }
+
+.header__inner {
+    margin: 0 auto;
+    height: 30px;
+    padding: 20px 20px;
+    max-width: none;
+}
+
+.header__logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header img {
+    width: auto;
+    height: 30px;
+    margin-left: 0px;
+}
+
+
 
 

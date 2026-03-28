@@ -33,7 +33,7 @@ class RegisterRequest extends FormRequest
 
     public function messages()
     {
-       return [
+        return [
         'name.required' => 'お名前を入力してください',
         'name.max' => 'お名前は20文字以内で入力してください',
         'email.required' => 'メールアドレスを入力してください',
@@ -42,6 +42,6 @@ class RegisterRequest extends FormRequest
         'password.min' => 'パスワードは8文字以上で入力してください',
         'password_confirmation.required' => '確認用パスワードを入力してください',
         'password_confirmation.same' => 'パスワードと一致しません',
-       ]; 
+        ];
     }
 }

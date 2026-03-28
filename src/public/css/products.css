@@ -1,67 +1,8 @@
-.header {
-  background: #000;
-}
-
-.header__inner {
-  margin: 0 auto;
-  padding: 20px 15px;
-  max-width: 1230px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-utilities {
-  display: flex;
-  align-items: center;
-  gap: 30px;  
-}
-
-
-
-.search-form input {
-  width: 260px;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-  
-}
-.header-nav__item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-}
-
-.header-nav__link {
-  text-decoration: none;
-  color: #fff;  
-}
-
-.header-nav__button {
-  background: #ff4d4d;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-/* 全体 */
 .item-content {
     width: 90%;
     margin: 0 auto; 
 }
 
-/* タブ */
 .tabs {
     display: flex;
     gap: 70px;
@@ -71,10 +12,8 @@
 }
 
 .tab {
-    
     text-decoration: none;
     color: #000;
-    
 }
 
 .tab.active {
@@ -82,35 +21,45 @@
     font-weight: bold;
 }
 
-/* 商品一覧 */
 .item-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
-/* 商品カード */
 .item-card {
     display: block;
-    text-decoration: none; /* 下線消す */
-    color: black;          /* 青文字防止 */
+    text-decoration: none;
+    color: black;
 }
 
-/* 画像ボックス */
 .item-card__image {
     width: 100%;
-    aspect-ratio: 1 / 1;   /* 正方形にする */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
+    position: relative;
 }
 
 .item-card__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
 }
 
-/* 商品名 */
 .item-card__name {
     margin-top: 10px;
     font-size: 16px;
+}
+
+.sold-label{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:red;
+    color:white;
+    padding:8px 14px;
+    font-size:16px;
+    font-weight:bold;
+    z-index:10;
 }

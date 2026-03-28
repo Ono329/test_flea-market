@@ -1,0 +1,39 @@
+.verify-container{
+    text-align:center;
+    margin-top:150px;
+}
+
+.verify-text{
+    font-size:16px;
+    margin-bottom:40px;
+    color:#333;
+    line-height:1.8;
+    font-weight: 700;
+}
+
+.verify-button{
+    display:inline-block;
+    padding:10px 40px;
+    border:1px solid #999;
+    background:#f0f0f0;
+    color:#333;
+    text-decoration:none;
+    border-radius:6px;
+    margin-bottom:20px;
+    font-size:14px;
+    font-weight: 700;
+}
+
+.resend-link{
+    display:block;
+    margin:20px auto;
+    color:#3490dc;
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.resend-link:hover{
+    text-decoration:underline;
+}

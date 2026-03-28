@@ -13,4 +13,23 @@ class Product extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+
+    public function likes()
+    {
+    return $this->hasMany(Like::class);
+    }
+
+    protected $fillable = [
+    'user_id',
+    'name',
+    'brand',
+    'price',
+    'description',
+    'category',
+    'condition',
+    'img_url'
+];
 }
+
+

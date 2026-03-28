@@ -7,6 +7,7 @@ use App\Http\Requests\RegisterRequest;
 // ai
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Events\Registered;
 
 
 class RegisterController extends Controller
@@ -25,6 +26,8 @@ class RegisterController extends Controller
             'is_profile_set' => false,
         ]);
 
+        event(new Registered($user));
+
         Auth::login($user);
 
 
@@ -32,5 +35,3 @@ class RegisterController extends Controller
     }
 }
 
-
-    
