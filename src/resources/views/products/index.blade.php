@@ -6,16 +6,13 @@
 
 @section('content')
 
-<!-- <form class="form" action="/list" method="post" novalidate>  -->
-      <!-- @csrf   -->
-<!-- </form> -->
 <div class="item-content">
     <div class="tabs">
         <a href="{{ route('products.index', ['keyword' => request('keyword')]) }}" class="tab">おすすめ</a>
 
-        <!-- @auth -->
+
         <a href="{{ route('products.mylist', ['keyword' => request('keyword')]) }}" class="tab active">マイリスト</a>
-        <!-- @endauth -->
+
 
     </div>
 
@@ -27,7 +24,7 @@
                 @if($product->sold == 1)
                     <span class="sold-label">SOLD</span>
                 @endif
-                
+
                     <img src="{{ asset('storage/' . $product->img_url) }}" alt="{{ $product->name }}">
                 </div>
                 <div class="item-card__name">
@@ -36,6 +33,6 @@
             </a>
         @endforeach
     </div>
-    
+
 </div>
 @endsection

@@ -15,8 +15,8 @@ class ProductController extends Controller
 
         if (auth()->check()) {
         $query->where(function ($q) {
-            $q->whereNull('user_id') // シーダー商品は表示
-              ->orWhere('user_id', '!=', auth()->id()); // 自分以外の出品商品
+            $q->whereNull('user_id')
+                ->orWhere('user_id', '!=', auth()->id());
         });
     }
 
@@ -31,8 +31,8 @@ class ProductController extends Controller
 
     public function show(Product $product)
     {
-        $product->load(['comments.user','likes']); // コメントとユーザー取得
-    
+        $product->load(['comments.user','likes']);
+
         return view('products.show', compact('product'));
     }
 
@@ -59,7 +59,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $path = $request->file('image')->store('products','public');
-        
+
         Product::create([
             'user_id' => auth()->id(),
             'name' => $request->name,
@@ -72,7 +72,6 @@ class ProductController extends Controller
         ]);
 
 
-        // return view('products.index', compact('products'));
         return redirect()->route('products.index');
     }
 

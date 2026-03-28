@@ -3,7 +3,6 @@
     gap: 80px;
     max-width: 1200px;
     margin: 80px auto;
-
     align-items: flex-start;
 }
 
@@ -16,9 +15,7 @@
 
 .product-detail__info {
     flex: 1;
-
     padding-top: 20px;
-
 }
 
 .price {
@@ -55,7 +52,7 @@ textarea {
     background: none;
     border: none;
     display: flex;
-    flex-direction: column; /* 縦並び */
+    flex-direction: column;
     align-items: center;
     gap: 5px;
     cursor: pointer;
@@ -67,7 +64,7 @@ textarea {
 
 .comment-icon{
     display: flex;
-    flex-direction: column; /* 縦並び */
+    flex-direction: column;
     align-items: center;
     gap: 4px;
 }
@@ -76,18 +73,16 @@ textarea {
     width: 22px;
 }
 
-/* いいねしていない */
 .not-liked{
-    color: color: transparent;
+    color: transparent;
 }
 
-/* いいねした */
 .liked{
     color: red;
 }
 
 .count{
-    margin-top:4px; 
+    margin-top:4px;
 }
 
 .submit{

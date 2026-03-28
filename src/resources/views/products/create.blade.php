@@ -128,7 +128,7 @@
     <label>販売価格</label>
 
     <div class="price-input">
-        <span>¥</span>    
+        <span>¥</span>
         <input type="number" name="price">
     </div>
 

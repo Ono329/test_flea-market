@@ -13,16 +13,16 @@ class LikeController extends Controller
         if (!Auth::check()) {
         return redirect()->route('login');
         }
-        
+
         $like = Like::where('user_id', Auth::id())
                     ->where('product_id', $product_id)
                     ->first();
 
         if ($like) {
-            // いいね解除
+
             $like->delete();
         } else {
-            // いいね追加
+
             Like::create([
                 'user_id' => Auth::id(),
                 'product_id' => $product_id

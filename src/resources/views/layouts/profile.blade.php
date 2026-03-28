@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="{{ asset('css/sell.css') }}">
   <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
   <link rel="stylesheet" href="{{ asset('css/mypage.css') }}">
- 
+
   @yield('css')
 </head>
 
@@ -21,16 +21,11 @@
   <header class="header">
     <div class="header__inner">
       <div class="header-utilities">
-        <!-- <a class="header__logo" href="/"> -->
-        
-          <img src="{{ asset('images/header.png') }}" alt="ヘッダー画像">  
-        <!--</a>-->
-          <!-- COACHTECH -->
-        <!-- </a> -->
+          <img src="{{ asset('images/header.png') }}" alt="ヘッダー画像">
 
         <form action="{{ route('products.index') }}" method="GET" class="search-form">
-          <input 
-              type="text" 
+          <input
+              type="text"
               name="keyword"
               placeholder="なにをお探しですか?"
               value="{{ request('keyword') }}">
@@ -53,15 +48,15 @@
 
     <li class="header-nav__item">
         <a href="{{ auth()->check() ? route('mypage') : route('login') }}"
-           class="header-nav__link">
-           マイページ
+          class="header-nav__link">
+            マイページ
         </a>
     </li>
 
     <li class="header-nav__item">
         <a href="{{ auth()->check() ? '/sell' : route('login') }}"
-           class="header-nav__button">
-           出品
+          class="header-nav__button">
+            出品
         </a>
     </li>
 

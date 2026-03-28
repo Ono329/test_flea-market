@@ -1,10 +1,8 @@
-/* 全体 */
 .item-content {
     width: 90%;
     margin: 0 auto; 
 }
 
-/* タブ */
 .tabs {
     display: flex;
     gap: 70px;
@@ -14,10 +12,8 @@
 }
 
 .tab {
-    
     text-decoration: none;
     color: #000;
-    
 }
 
 .tab.active {
@@ -25,24 +21,21 @@
     font-weight: bold;
 }
 
-/* 商品一覧 */
 .item-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
-/* 商品カード */
 .item-card {
     display: block;
-    text-decoration: none; /* 下線消す */
-    color: black;          /* 青文字防止 */
+    text-decoration: none;
+    color: black;
 }
 
-/* 画像ボックス */
 .item-card__image {
     width: 100%;
-    aspect-ratio: 1 / 1;   /* 正方形にする */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     position: relative;
 }
@@ -54,7 +47,6 @@
     position: relative;
 }
 
-/* 商品名 */
 .item-card__name {
     margin-top: 10px;
     font-size: 16px;

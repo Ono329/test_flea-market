@@ -4,13 +4,12 @@
 
 .header__inner {
     margin: 0 auto;
-    /* height: 30px; */
     padding: 20px 20px;
     max-width: none;
 
-    display: flex;              /* ← 追加 */
-    align-items: center;        /* ← 追加 */
-    justify-content: space-between; /* ← 追加 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header__logo {
@@ -26,14 +25,12 @@
     margin-left: 0px;
 }
 
-/* 左側 */
 .header-utilities {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* 検索を中央に */
 .search-form {
     display: flex;
     justify-content: center;
@@ -47,7 +44,6 @@
     border: none;
 }
 
-/* 右側 */
 .header-nav {
     display: flex;
     align-items: center;
@@ -55,13 +51,11 @@
     list-style: none;
 }
 
-/* リンク */
 .header-nav__link {
     color: #fff;
     text-decoration: none;
 }
 
-/* 出品ボタン */
 .header-nav__button {
     background: #ff4d4d;
     color: #fff;

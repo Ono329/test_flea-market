@@ -19,18 +19,18 @@
 
     <div class="reaction">
 
-    <!-- {{-- ログインしている場合 --}} -->
+
     @auth
-    
+
     <form action="{{ route('like.toggle', $product->id) }}" method="POST">
     @csrf
 
     <button class="favorite-btn">
-    
+
     @if ($product->likes->where('user_id', auth()->id())->count())
 
     <img src="{{ asset('images/ハートロゴ_ピンク.png') }}" >
-    
+
     @else
 
     <img src="{{ asset('images/ハートロゴ_デフォルト.png') }}" >
@@ -44,13 +44,13 @@
     </form>
     @endauth
 
-    <!-- {{-- 未ログイン --}} -->
+
     @guest
     <div class="favorite-btn">
     <a href="{{ route('login') }}">
     <img src="{{ asset('images/ハートロゴ_デフォルト.png') }}">
     </a>
-        
+
     <span class="count">{{ $product->likes->count() }}</span>
     </div>
     @endguest
@@ -82,7 +82,7 @@
             <span class="category-label">カテゴリー</span>
 
             <div class="category-tags">
-                 @foreach (json_decode($product->category, true) ?? [] as $category)
+                @foreach (json_decode($product->category, true) ?? [] as $category)
                     <span class="category-tag">{{ $category }}</span>
                 @endforeach
             </div>
@@ -101,7 +101,6 @@
             </div>
         @endforeach
 
-        <!-- {{-- ログインしている場合 --}} -->
         @auth
         <form id="comment-form" action="{{ route('comments.store') }}" method="POST">
         @csrf
@@ -121,7 +120,6 @@
         </form>
         @endauth
 
-        <!-- {{-- 未ログインの場合 --}} -->
         @guest
         <textarea class="comment-input" placeholder="こちらにコメントが入ります。"></textarea>
 
